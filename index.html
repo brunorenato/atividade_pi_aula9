@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <script src="scripts.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="background-color:#B0C4DE">  
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color", "orange");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color", "yellow");
+            });
+        });
+    </script>
+    
+    <br>
+    <h1>FORMULÁRIO:</h1>
+    
+    <br><hr><br><br><br>
+    <form name="meuForm" action="http://localhost:8001/alunos/add" onsubmit="return validarForm()" method="POST">
+        Nome: <input type="text" name="nome" id="txtNome">
+        Curso: <input type="text" name="curso" id="txtCurso">
+        <input type="submit" value="Salvar">
+    </form>
+    <br><br><br><hr><br><br>
+
+    <a href="http://localhost:8001/alunos" target="_blank">Listar</a>
+
+    <br><br><br><hr>
+
+</body>
+</html>
+
